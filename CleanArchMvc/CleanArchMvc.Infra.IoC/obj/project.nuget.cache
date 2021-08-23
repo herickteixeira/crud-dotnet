@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "slXG3iEbtk+57lH83DRuLNKtNsszP6WGRVaY9CYXCCB9JuympMfi6uaU30+fHvCQx2jyNdOy0/n3KmRcm3YkZw==",
+  "dgSpecHash": "D+xWu991LFOn9B2ZI3kM3g4H5y4y6LE3QXiJKvCC+LsTOf4wamFr9QiYClVyEt+zon6ig+ndQ84L5ChecadUhg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Herick\\Desktop\\CleanArtchtecture\\CleanArchMvc\\CleanArchMvc.Infra.IoC\\CleanArchMvc.Infra.IoC.csproj",
+  "projectFilePath": "C:\\Users\\Herick\\Desktop\\CleanArtchtecture\\CursoCleanArchitecture\\CleanArchMvc\\CleanArchMvc.Infra.IoC\\CleanArchMvc.Infra.IoC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Herick\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\Herick\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",

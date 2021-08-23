@@ -23,9 +23,12 @@ namespace CleanArchMvc.Infra.IoC
             OptionsServiceCollectionExtensions.UseSqlServer(configuration.GetConnectionString("DefaultConnection"
             ), b => b.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));
 
-            services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
+            services.AddIdentity<ApplicationUser, IdentityRole>()
+                .AddEntityFrameworkStores<ApplicationDbContext>()
+                .AddDefaultTokenProviders();
 
-            services.ConfigureApplicationCookie(options => options.AccessDeniedPath = "/Account/Login");
+            services.ConfigureApplicationCookie(options => 
+                    options.AccessDeniedPath = "/Account/Login");
 
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<IProductRepository, ProductRepository>();

@@ -8,12 +8,11 @@ namespace CleanArchMvc.WebUi.Controllers
     public class AccountController : Controller
     {
         private readonly IAuthenticate _authentication;
-        public AccountController(IAuthenticate authenticate)
+        public AccountController(IAuthenticate authentication)
         {
-            _authentication = authenticate;
+            _authentication = authentication;
         }
 
-        public string ReturnUrl { get; private set; }
 
         [HttpGet]
         public IActionResult Login(string returnUrl)

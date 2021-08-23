@@ -14,8 +14,8 @@ namespace CleanArchMvc.WebUi.ViewModels
         
         [DataType(DataType.Password)]
         [Display(Name = "Confirme a senha")]
-        [Compare("Senha", ErrorMessage = "A senha não confere")]
-        public string ConfirmePassword { get; set; }
+        [Compare("Password", ErrorMessage = "A senha não confere")]
+        public string ConfirmPassword { get; set; }
 
 
     }
