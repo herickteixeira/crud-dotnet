@@ -1,16 +1,15 @@
 ﻿using CleanArchMvc.Application.DTOs;
 using CleanArchMvc.Application.Interfaces;
-using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace CleanArchMvc.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class ProductsController : ControllerBase
     {
         private readonly IProductService _productService;
@@ -60,10 +59,10 @@ namespace CleanArchMvc.API.Controllers
         public async Task<ActionResult> Put(int id, [FromBody] ProductDTO productDto)
         {
             if (id != productDto.Id)
-                return BadRequest("Categoria Inválida.");
+                return BadRequest("Produto Inválida.");
 
             if (productDto == null)
-                return BadRequest("Categoria Inválida.");
+                return BadRequest("Produto Inválida.");
 
             await _productService.Update(productDto);
 
@@ -77,7 +76,7 @@ namespace CleanArchMvc.API.Controllers
 
             if (product == null)
             {
-                return NotFound("Categoria não encontrada.");
+                return NotFound("Produto não encontrada.");
             }
 
             await _productService.Remove(id);
