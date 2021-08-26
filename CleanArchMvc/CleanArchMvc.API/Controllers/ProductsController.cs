@@ -59,10 +59,10 @@ namespace CleanArchMvc.API.Controllers
         public async Task<ActionResult> Put(int id, [FromBody] ProductDTO productDto)
         {
             if (id != productDto.Id)
-                return BadRequest("Produto Inválida.");
+                return BadRequest("Produto Inválido.");
 
             if (productDto == null)
-                return BadRequest("Produto Inválida.");
+                return BadRequest("Produto Inválido.");
 
             await _productService.Update(productDto);
 
@@ -76,7 +76,7 @@ namespace CleanArchMvc.API.Controllers
 
             if (product == null)
             {
-                return NotFound("Produto não encontrada.");
+                return NotFound("Produto não encontrado.");
             }
 
             await _productService.Remove(id);
